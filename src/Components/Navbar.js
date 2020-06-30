@@ -36,13 +36,14 @@ const NavWrapper = styled.nav`
   width: 100%;
   max-width: 100vw;
   position:sticky;
+  top:0;
   height: 62px;
   box-shadow: 1px 0px 6px #ccc;
   display: flex;
   align-items: center;
   justify-content:space-between;
   padding:0.5rem 1rem;
-
+  background-color:#fff;
   .navbar__wrapper {
     height:100%;
     display:flex;
