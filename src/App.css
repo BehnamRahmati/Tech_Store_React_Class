@@ -1,0 +1,13 @@
+.mainLink {
+  padding: 0.7rem 3rem;
+  background-color: dodgerblue;
+  color:#fff;
+  display:inline-block;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  outline: 2px solid dodgerblue;
+  outline-offset: 4px;
+}
+.mainLink:hover {
+  background-color: rgb(0, 102, 204);
+}
