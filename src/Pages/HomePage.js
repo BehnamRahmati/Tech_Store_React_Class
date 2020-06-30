@@ -1,9 +1,13 @@
 import React from 'react'
-
+import { ProductConsumer } from "../Context/Context"
 export default function AboutPage() {
   return (
     <>
-      <h1>Home page</h1>
+      <ProductConsumer>
+        {value => {
+          return (<h1>from home</h1>)
+        }}
+      </ProductConsumer>
     </>
   )
 }
