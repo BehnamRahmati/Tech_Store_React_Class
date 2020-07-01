@@ -14,7 +14,7 @@ export default function Hero({ img, title, max, children }) {
   )
 }
 
-const HeroWrapper = styled.div`
+const HeroWrapper = styled.header`
 width:100%;
 max-width:100vw;
 height:${props => props.max ? "calc(100vh - 62px)" : "80vh"};
@@ -37,7 +37,7 @@ justify-content:center;
   text-shadow:4px 4px 2px rgba(0,0,0,0.3);
   letter-spacing:3px;
   text-align:center;
-  padding:2rem 1rem;
+  padding:1rem 1rem;
 }
 
 `

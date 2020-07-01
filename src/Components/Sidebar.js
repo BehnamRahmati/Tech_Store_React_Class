@@ -22,6 +22,7 @@ export default function Navbar() {
 
 const responsiveNav = "max-width:1000px";
 const SideWrapper = styled.nav`
+z-index: 100;
   position:fixed;
   top:63px;
   right:0;

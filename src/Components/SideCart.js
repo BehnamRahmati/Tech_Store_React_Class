@@ -24,6 +24,7 @@ const CartWrapper = styled.div`
   left:0;
   height: calc(100vh - 63px);
   width:300px;
+  z-index: 100;
   background-color:#fff;
   box-shadow:inset -1px 0 5px #ccc;
   transition:all 0.4s linear ;

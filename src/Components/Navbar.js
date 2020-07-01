@@ -22,7 +22,7 @@ export default function Navbar() {
                 {links.map(link => <li key={link.id}><Link className="navbar__link" to={link.path}>{link.text}</Link></li>)}
               </ul>
               <Link to="/"><img src={logo} alt="logo" /></Link>
-              <FcMenu className="navbar-toggler" onClick={handleSidebar} />
+              <FcMenu className="navbar__toggler" onClick={handleSidebar} />
             </div>
           </NavWrapper>
         )
@@ -33,30 +33,33 @@ export default function Navbar() {
 
 const responsiveNav = "max-width:1000px";
 const NavWrapper = styled.nav`
+  margin:0;
   width: 100%;
   max-width: 100vw;
   position:sticky;
   top:0;
-  height: 62px;
+  height: 63px;
   box-shadow: 1px 0px 6px #ccc;
   display: flex;
   align-items: center;
   justify-content:space-between;
   padding:0.5rem 1rem;
   background-color:#fff;
+  z-index: 1000;
   .navbar__wrapper {
     height:100%;
     display:flex;
     align-items: center;
     .navbar__links {
+      margin: 0;
       display:flex;
       align-items:center;
       height:100%;
       flex-direction:row-reverse;
+      align-items:center;
       @media (${responsiveNav}) {
       display: none;
       }
-
       .navbar__link {
         padding:1.2rem;
         text-transform:capitalize;
@@ -69,7 +72,7 @@ const NavWrapper = styled.nav`
         border-bottom:2px solid dodgerblue;
       }
     }
-    .navbar-toggler {
+    .navbar__toggler {
       display: none;
       font-size:2rem;
       margin:0 1rem;
