@@ -5,7 +5,7 @@ import AboutBcg from "../images/aboutBcg.jpeg"
 export default function AboutPage() {
   return (
     <>
-      <Hero title="about page" img={AboutBcg} max />
+      <Hero title="about page" img={AboutBcg} max="true" />
       <Info />
     </>
   )
