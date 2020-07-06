@@ -5,11 +5,11 @@ import ProductsBcg from "../images/productsBcg.jpeg"
 import { Link } from "react-router-dom"
 export default function AboutPage() {
   return (
-    <>
+    <React.Fragment>
       <Hero title="products" img={ProductsBcg}>
         <Link to="/" className="mainLink">home</Link>
       </Hero>
       <Products />
-    </>
+    </React.Fragment>
   )
 }

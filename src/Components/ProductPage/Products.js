@@ -10,10 +10,10 @@ export default function Products() {
       {value => {
         const { filteredProducts } = value;
         return (
-          <section className="py-5">
+          <section className="py-5" >
             <Title center title="our products" />
             <FilterdProduct />
-            <div className="row">
+            <div className="row" style={{ maxWidth: "100vw" }}>
               <div className="col-10 mx-auto">
                 <h6 className="text-title text-capitalize"> total product : {filteredProducts.length} </h6>
               </div>

@@ -210,8 +210,39 @@ class ProductProvider extends Component {
     })
   }
 
-  handleChange = (e) => { }
-  sortData = (id) => { }
+  handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    this.setState(() => {
+      return {
+        [name]: value,
+      }
+    },
+      this.sortData)
+  }
+  sortData = () => {
+    const { storedProducts, price, company, shipping, search } = this.state;
+    let tempPrice = parseInt(price);
+    let tempProduct = [...storedProducts];
+    if (company !== "all") tempProduct = tempProduct.filter(item => item.company === company);
+    tempProduct = tempProduct.filter(item => parseInt(item.price) <= tempPrice);
+    if (shipping) tempProduct = tempProduct.filter(item => item.shipping === true);
+
+    if (search.length > 0) {
+      tempProduct = tempProduct.filter(item => {
+        let tempSearch = search.toLowerCase();
+        let tempTitle = item.title.toLowerCase().slice(0, search.length);
+        if (tempSearch === tempTitle) return item;
+      });
+    }
+
+
+
+
+    this.setState({
+      filteredProducts: tempProduct
+    })
+  }
 
 
   handleSidebar = () => { this.setState({ sidebarOpen: !this.state.sidebarOpen }) }
